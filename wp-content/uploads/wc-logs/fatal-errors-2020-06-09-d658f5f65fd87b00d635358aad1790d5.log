@@ -1,0 +1,47 @@
+2020-06-09T21:04:03+00:00 CRITICAL Uncaught Error: Call to undefined function http://eurasia/wp-content/themes/eurasia() in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:147
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(287): eurasia_scripts('')
+#1 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 E:\OpenServer\domains\Eurasia\wp-includes\script-loader.php(2294): do_action('wp_enqueue_scri...')
+#4 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(287): wp_enqueue_scripts('')
+#5 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#6 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#7 E:\OpenServer\domains\Eurasia\wp-includes\general-template.php(2884): do_action('wp_head')
+#8 E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\header.php(20): wp_head()
+ в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 147
+
+2020-06-09T21:43:12+00:00 CRITICAL syntax error, unexpected '}' в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 165
+
+2020-06-09T21:45:12+00:00 CRITICAL syntax error, unexpected '}' в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 165
+
+2020-06-09T21:47:03+00:00 CRITICAL syntax error, unexpected '}' в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 165
+
+2020-06-09T21:47:06+00:00 CRITICAL syntax error, unexpected '}' в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 165
+
+2020-06-09T21:48:42+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:48:42+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:50:04+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:50:48+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:50:49+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:50:50+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:50:51+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:52:00+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:52:00+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:52:01+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:52:04+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:52:05+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
+2020-06-09T21:52:05+00:00 CRITICAL Cannot redeclare eurasia_customize_register() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:163) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\inc\customizer.php на строке 34
+
