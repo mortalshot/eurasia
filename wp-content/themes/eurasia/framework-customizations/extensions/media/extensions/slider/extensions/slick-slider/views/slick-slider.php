@@ -7,11 +7,21 @@
 					<a href="<?php echo $slide['extra']['link'] ?>" class="item-link">
 					<?php endif; ?>
 					<div class="slider-item__bg" style="background-image: url('<?php echo $slide['src']; ?>');">
-						<div class="item-wrapper">
-							<div class="slider-item__title"><?php echo $slide['title']; ?></div>
-							<div class="slider-item__description"><?php echo $slide['desc']; ?></div>
-							<div class="slider-item__note"><?php echo $slide['extra']['note']; ?></div>
-						</div>
+						<?php if ($slide['title'] || $slide['desc'] || $slide['note']) : ?>
+							<div class="item-wrapper">
+							<?php endif; ?>
+							<?php if ($slide['title']) : ?>
+								<div class="slider-item__title"><?php echo $slide['title']; ?></div>
+							<?php endif; ?>
+							<?php if ($slide['desc']) : ?>
+								<div class="slider-item__description"><?php echo $slide['desc']; ?></div>
+							<?php endif; ?>
+							<?php if ($slide['extra']['note']) : ?>
+								<div class="slider-item__note"><?php echo $slide['extra']['note']; ?></div>
+							<?php endif; ?>
+							<?php if ($slide['title'] || $slide['desc'] || $slide['note']) : ?>
+							</div>
+						<?php endif; ?>
 					</div>
 					<?php if ($slide['extra']['link']) : ?>
 					</a>

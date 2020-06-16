@@ -41,7 +41,7 @@ if (!empty($atts['thumb']) && $bg_image) {
 }
 
 ?>
-<section id="<?php echo esc_attr($custom_id) ?>" class="fw-main-row <?php echo esc_attr($section_extra_classes) ?>" <?php echo $section_style; ?> <?php echo $bg_video_data_attr; ?>>
+<section <?php if($custom_id) echo 'id="' . esc_attr($custom_id) . '"' ?> class="fw-main-row <?php echo esc_attr($section_extra_classes) ?>" <?php echo $section_style; ?> <?php echo $bg_video_data_attr; ?>>
 	<div class="<?php echo esc_attr($container_class); ?>">
 		<?php echo do_shortcode($content); ?>
 	</div>

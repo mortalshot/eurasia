@@ -152,10 +152,10 @@ function eurasia_scripts()
 
 	// wp_enqueue_style('eurasia-slick', get_template_directory_uri() . '/assets/css/slick.css', array(), _S_VERSION);
 	wp_enqueue_style('eurasia-custom', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION);
-	
+
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.5.0.min.js', array(), false, true);
-	
+
 	wp_enqueue_script('eurasia-slick.min-js', get_template_directory_uri() . '/assets/js/slick.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('eurasia-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), _S_VERSION, true);
 	wp_enqueue_script('eurasia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
@@ -165,6 +165,8 @@ function eurasia_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'eurasia_scripts');
+
+
 
 /**
  * Implement the Custom Header feature.

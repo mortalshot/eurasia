@@ -1,0 +1,146 @@
+.section-home-slider {
+    margin-bottom: 100px;
+    @media screen and (max-width: 1600px) {
+        .fw-container {
+            padding: 0 85px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 50px;
+        .fw-container {
+            padding: 0 60px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+        .fw-container {
+            padding: 0 15px;
+        }
+    }
+}
+
+.home-slider {
+    position: relative;
+}
+
+.slick-list {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+.item-link {
+    color: $text-color;
+}
+.slider-item {
+    position: relative;
+    &__bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 470px;
+        @media screen and (max-width: 575px) {
+            min-height: inherit;
+        }
+        // !раскомментировать, если нужно одинаковое затемнение на всех слайдах
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: rgba(22, 22, 22, 0.5);
+        //     mix-blend-mode: hard-light;
+        // }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: calc(30px + 25 * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(63 / 55);
+        letter-spacing: 0.05em;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: calc(18px + 7 * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(30 / 25);
+        padding-top: 10px;
+    }
+
+    &__note {
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 58px;
+    }
+}
+
+.item-wrapper {
+    position: relative;
+    max-width: 50.5%;
+    padding: 120px 0px 48px 80px;
+    @media screen and (max-width: 991px) {
+        max-width: 100%;
+        padding: 120px 80px 48px;
+    }
+    @media screen and (max-width: 767px) {
+        max-width: 100%;
+        padding: 16vh 40px;
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 20px;
+    }
+}
+
+.slick-arrow {
+    font-size: 0;
+    border: none;
+    width: 30px;
+    height: 59px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 10;
+    cursor: pointer;
+}
+.slick-prev {
+    background: url(../img/icons/slider/arrow-1.svg) no-repeat;
+    left: -68px;
+    @media screen and (max-width: 1199px) {
+        left: -45px;
+    }
+}
+.slick-next {
+    background: url(../img/icons/slider/arrow-2.svg) no-repeat;
+    right: -68px;
+    @media screen and (max-width: 1199px) {
+        right: -45px;
+    }
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0 -5px;
+    transform: translate(0, -20px);
+    li {
+        padding: 0 5px;
+        button {
+            font-size: 0;
+            display: block;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: none;
+            border: 1px solid $text-color;
+            padding: 0;
+        }
+        &.slick-active {
+            button {
+                background: $text-color;
+            }
+        }
+    }
+}

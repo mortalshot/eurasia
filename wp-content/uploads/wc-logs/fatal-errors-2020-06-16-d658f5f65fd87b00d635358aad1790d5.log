@@ -6,3 +6,64 @@
 
 2020-06-16T11:10:25+00:00 CRITICAL syntax error, unexpected ''link'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\framework-customizations\extensions\media\extensions\slider\extensions\slick-slider\options\custom.php на строке 10
 
+2020-06-16T15:21:24+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\framework-customizations\extensions\shortcodes\shortcodes\section\views\view.php на строке 48
+
+2020-06-16T15:22:45+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\framework-customizations\extensions\shortcodes\shortcodes\section\views\view.php на строке 44
+
+2020-06-16T15:22:52+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF), expecting ',' or ';' в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\framework-customizations\extensions\shortcodes\shortcodes\section\views\view.php на строке 44
+
+2020-06-16T15:23:02+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\framework-customizations\extensions\shortcodes\shortcodes\section\views\view.php на строке 48
+
+2020-06-16T16:06:07+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_hide_selected_terms(), 1 passed in E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:169
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(289): wc_hide_selected_terms(Array)
+#1 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(1204): apply_filters('get_terms', Array, Array, Array, Object(WP_Term_Query))
+#3 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(186): get_terms(Array, Array)
+#4 E:\OpenServer\domains\Eurasia\wp-includes\shortcodes.php(343): WC_Shortcodes::product_categories(Array, '', 'product_categor...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 E:\OpenServer\domains\Eurasia\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)( в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 169
+
+2020-06-16T16:06:07+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_hide_selected_terms(), 1 passed in E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:169
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(289): wc_hide_selected_terms(Array)
+#1 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(1204): apply_filters('get_terms', Array, Array, Array, Object(WP_Term_Query))
+#3 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(2031): get_terms(Array)
+#4 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(3408): wp_get_object_terms(Array, Array, Array)
+#5 E:\OpenServer\domains\Eurasia\wp-includes\post.php(6687): update_object_term_cache(Array, Array)
+#6 E:\OpenServer\domains\Eurasia\wp-includes\post.php(7074): update_post_caches(Array, 'any', true, true)
+#7 E:\OpenServ в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 169
+
+2020-06-16T16:06:08+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_hide_selected_terms(), 1 passed in E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:169
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(289): wc_hide_selected_terms(Array)
+#1 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(1204): apply_filters('get_terms', Array, Array, Array, Object(WP_Term_Query))
+#3 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(2031): get_terms(Array)
+#4 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(3408): wp_get_object_terms(Array, Array, Array)
+#5 E:\OpenServer\domains\Eurasia\wp-includes\post.php(6687): update_object_term_cache(Array, Array)
+#6 E:\OpenServer\domains\Eurasia\wp-includes\post.php(7074): update_post_caches(Array, 'any', true, true)
+#7 E:\OpenServ в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 169
+
+2020-06-16T16:06:33+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_hide_selected_terms(), 1 passed in E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:169
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(289): wc_hide_selected_terms(Array)
+#1 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(1204): apply_filters('get_terms', Array, Array, Array, Object(WP_Term_Query))
+#3 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(186): get_terms(Array, Array)
+#4 E:\OpenServer\domains\Eurasia\wp-includes\shortcodes.php(343): WC_Shortcodes::product_categories(Array, '', 'product_categor...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 E:\OpenServer\domains\Eurasia\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)( в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 169
+
+2020-06-16T16:06:33+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_hide_selected_terms(), 1 passed in E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:169
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(289): wc_hide_selected_terms(Array)
+#1 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(1204): apply_filters('get_terms', Array, Array, Array, Object(WP_Term_Query))
+#3 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(2031): get_terms(Array)
+#4 E:\OpenServer\domains\Eurasia\wp-includes\taxonomy.php(3408): wp_get_object_terms(Array, Array, Array)
+#5 E:\OpenServer\domains\Eurasia\wp-includes\post.php(6687): update_object_term_cache(Array, Array)
+#6 E:\OpenServer\domains\Eurasia\wp-includes\post.php(7074): update_post_caches(Array, 'any', true, true)
+#7 E:\OpenServ в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 169
+

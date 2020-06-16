@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // home slider
     $('.home-slider').slick({
         adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                }
+            },
+        ],
     });
 
     // ibg
