@@ -55,22 +55,9 @@
 /* Лента слайдов */
 .slick-track {
     display: flex;
+    align-items: flex-start;
 }
-/* Слайд */
-.slick-slide {
-}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-/* Клонированный слайд */
-.slick-slide.slick-cloned {
-}
+
 .slick-arrow {
     font-size: 0;
     border: none;
