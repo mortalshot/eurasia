@@ -99,7 +99,7 @@
         font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));
         line-height: calc(24 / 20);
         text-align: center;
-        letter-spacing: 0.05em;
+        letter-spacing: 1.1px;
         color: $text-color;
         @media screen and (max-width: 900px) {
             font-size: 20px;

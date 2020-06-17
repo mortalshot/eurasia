@@ -8,4 +8,9 @@ $options = array(
 		'desc'  => __('Введите shortcode, например, [booking]', 'fw'),
 		'type'  => 'text',
 	),
+	'class'    => array(
+		'label' => __('Class', 'fw'),
+		'desc'  => __('Введите класс для обертки shortcode', 'fw'),
+		'type'  => 'text',
+	),
 );

@@ -67,3 +67,16 @@ Stack trace:
 #6 E:\OpenServer\domains\Eurasia\wp-includes\post.php(7074): update_post_caches(Array, 'any', true, true)
 #7 E:\OpenServ в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 169
 
+2020-06-16T19:27:09+00:00 CRITICAL syntax error, unexpected 'do_action' (T_STRING) в E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\templates\content-product_cat.php на строке 49
+
+2020-06-16T21:03:20+00:00 CRITICAL Uncaught Error: Call to a member function get_sku() on null in E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\templates\single-product\meta.php:28
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-core-functions.php(251): include()
+#1 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1547): wc_get_template('single-product/...')
+#2 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(287): woocommerce_template_single_meta(Object(WP_Term))
+#3 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#5 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\templates\content-product_cat.php(36): do_action('woocommerce_bef...', Object(WP_Term))
+#6 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-core-functions.php(251): include('E:\\OpenServer\\d...')
+ в E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\templates\single-product\meta.php на строке 28
+

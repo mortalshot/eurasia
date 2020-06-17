@@ -13,6 +13,50 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '1.0.0');
 }
 
+// !
+// !Изменения WooCommerce
+// !
+//удаление фотографий в категориях товаров
+remove_action('woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
+
+// ссылка на товар по клику на фотографию
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
+
+// обертка текста в карточке товара
+add_action('woocommerce_shop_loop_item_title', 'product_content_wrapper_start', 8);
+
+// ссылка на товар по клику на название товара
+add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 9);
+add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 15);
+
+//добавление описания в карточке товара
+add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_single_excerpt', 4);
+
+//перемещение цены в карточке товара
+remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+add_action('woocommerce_after_shop_loop_item', 'shop_loop_item_wrapper_start', 4);
+add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price', 4);
+add_action('woocommerce_after_shop_loop_item', 'wrapper_end', 20);
+
+add_action('woocommerce_after_shop_loop_item', 'wrapper_end', 21);
+
+function product_content_wrapper_start()
+{
+	echo '<div class="product-content">';
+}
+function shop_loop_item_wrapper_start()
+{
+	echo '<div class="product-footer">';
+}
+function wrapper_end()
+{
+	echo '</div>';
+}
+
+
+
+
 if (!function_exists('eurasia_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
