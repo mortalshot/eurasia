@@ -16,24 +16,27 @@ if (!defined('_S_VERSION')) {
 // !
 // !Изменения WooCommerce
 // !
-//удаление фотографий в категориях товаров
+// !удаление фотографий в категориях товаров
 remove_action('woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
 
-// ссылка на товар по клику на фотографию
+// !ссылка на товар по клику на фотографию
+remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
-add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
 
-// обертка текста в карточке товара
+
+// add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
+
+// !обертка текста в карточке товара
 add_action('woocommerce_shop_loop_item_title', 'product_content_wrapper_start', 8);
 
-// ссылка на товар по клику на название товара
-add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 9);
-add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 15);
+// !ссылка на товар по клику на название товара
+// add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 9);
+// add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 15);
 
-//добавление описания в карточке товара
+// !добавление описания в карточке товара
 add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_single_excerpt', 4);
 
-//перемещение цены в карточке товара
+// !перемещение цены в карточке товара
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
 add_action('woocommerce_after_shop_loop_item', 'shop_loop_item_wrapper_start', 4);
 add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price', 4);
@@ -96,8 +99,9 @@ if (!function_exists('eurasia_setup')) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Primary', 'eurasia'),
 				'header-menu' => esc_html__('Header menu', 'eurasia'),
+				'footer-menu-left' => esc_html__('Footer menu left', 'eurasia'),
+				'footer-menu-right' => esc_html__('Footer menu right', 'eurasia'),
 			)
 		);
 

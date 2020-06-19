@@ -72,14 +72,11 @@
         max-width: 1373px;
         @media screen and (max-width: 1550px) {
             padding: 0 48px;
-            max-width: 1456px;
+            max-width: 1400px;
         }
         @media screen and (max-width: 649px) {
             padding: 0 15px;
         }
-    }
-    .fw-special-title {
-        padding-left: 78px;
     }
 }
 
@@ -167,6 +164,19 @@
                             font-size: calc(18px + 7 * ((100vw - 320px) / (1920 - 320)));
                             line-height: calc(30 / 25);
                             font-weight: 600;
+                            display: flex;
+                            flex-direction: row-reverse;
+                            align-items: center;
+                            ins {
+                                font-weight: 600;
+                                text-decoration: none;
+                            }
+                            del {
+                                opacity: 1;
+                                color: $oldPrice-color;
+                                font-size: calc(12px + 2 * ((100vw - 320px) / (1920 - 320)));
+                                padding-left: 9px;
+                            }
                         }
                         .ajax_add_to_cart {
                             font-size: 0;
@@ -199,7 +209,34 @@
     }
 }
 @media screen and (max-width: 768px) {
-    .woocommerce ul.products[class*=columns-] li.product {
+    .woocommerce ul.products[class*="columns-"] li.product {
         width: 300px;
     }
+}
+
+.site-footer {
+    background: $card-color;
+    padding: 30px 0;
+}
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .information {
+        text-align: right;
+    }
+}
+.footer-navigation {
+    display: flex;
+    text-align: center;
+    .menu-item {
+        a {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 400;
+        }
+    }
+}
+
+.footer-bottom {
 }

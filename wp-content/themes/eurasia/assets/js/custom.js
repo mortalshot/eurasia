@@ -23,14 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
         adaptiveHeight: true,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 767,
                 settings: {
                     arrows: false,
                     dots: true,
                 }
             },
-        ],
+        ]
     });
+    $('.home-slider').slick('setPosition');
+
     // best-selling-products slider
     $('.best-selling-products .products, .recent-products .products').slick({
         slidesToShow: 4,

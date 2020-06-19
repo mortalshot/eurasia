@@ -93,5 +93,6 @@ li {
     font-size: calc(24px + 16 * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(49 / 40);
     font-weight: 700;
-    padding: 0px 0px 17px 60px;
+    padding: 0px 0px 17px 0px;
+    text-align: center;
 }
