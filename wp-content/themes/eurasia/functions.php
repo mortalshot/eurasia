@@ -12,38 +12,50 @@ if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
 	define('_S_VERSION', '1.0.0');
 }
-
-// !
-// !Изменения WooCommerce
-// !
-// !удаление фотографий в категориях товаров
+add_action('after_setup_theme', 'woocommerce_support');
+function woocommerce_support()
+{
+	add_theme_support('woocommerce');
+}
+// *
+// * Изменения WooCommerce
+// *
+// удаление фотографий в категориях товаров
 remove_action('woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
 
-// !ссылка на товар по клику на фотографию
+// удаление ссылки на страницу товара
 remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
 
+// добавление обертки фотографии в карточке товара
+add_action('woocommerce_before_shop_loop_item', 'product_img_wrapper_start', 4);
+add_action('woocommerce_shop_loop_item_title', 'wrapper_end', 7);
 
-// add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
-
-// !обертка текста в карточке товара
+// обертка текста в карточке товара
 add_action('woocommerce_shop_loop_item_title', 'product_content_wrapper_start', 8);
 
-// !ссылка на товар по клику на название товара
-// add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 9);
-// add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 15);
-
-// !добавление описания в карточке товара
+// добавление описания в карточке товара
 add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_single_excerpt', 4);
 
-// !перемещение цены в карточке товара
+// перемещение цены в карточке товара
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
 add_action('woocommerce_after_shop_loop_item', 'shop_loop_item_wrapper_start', 4);
 add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price', 4);
 add_action('woocommerce_after_shop_loop_item', 'wrapper_end', 20);
-
 add_action('woocommerce_after_shop_loop_item', 'wrapper_end', 21);
 
+// !archive-product.php
+// удаление хлебных крошек
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+
+// удаление количества выведенных товаров, удаление сортировки товаров
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+function product_img_wrapper_start()
+{
+	echo '<div class="product-img">';
+}
 function product_content_wrapper_start()
 {
 	echo '<div class="product-content">';

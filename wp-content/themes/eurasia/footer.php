@@ -35,7 +35,9 @@
 
 
 			</div>
-			<div class="footer-bottom"></div>
+			<div class="footer-bottom">
+				<div class="policy"><a href="<?php echo get_page_link(3) ?>">Евразия, все права защищены</a></div>
+			</div>
 
 		</div>
 	</footer>

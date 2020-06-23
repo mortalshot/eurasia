@@ -35,6 +35,8 @@
         font-weight: bold;
         font-size: calc(18px + 7 * ((100vw - 320px) / (1920 - 320)));
         line-height: calc(30 / 25);
+        text-decoration: none;
+        transition: 0.3s ease all 0s;
         @media screen and (max-width: 450px) {
             font-size: 0;
             background: url(../img/icons/header/2.svg) no-repeat;
@@ -43,8 +45,7 @@
             height: 25px;
         }
         &:hover {
-            color: $text-color;
-            text-decoration: underline;
+            color: $oldPrice-color;
         }
     }
 }
@@ -101,11 +102,27 @@
         text-align: center;
         letter-spacing: 1.1px;
         color: $text-color;
+        transition: 0.3s ease all 0s;
+        position: relative;
         @media screen and (max-width: 900px) {
             font-size: 20px;
         }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            background: $oldPrice-color;
+            opacity: 0;
+            height: 3px;
+            transition: 0.3s ease all 0s;
+            width: 100%;
+        }
         &:hover {
-            text-decoration: underline;
+            color: $oldPrice-color;
+            &::after {
+                opacity: 1;
+            }
         }
     }
     @media screen and (max-width: 1050px) {
@@ -123,8 +140,12 @@
     flex: 0 0 120px;
     justify-content: flex-end;
     z-index: 10;
+    transition: 0.3s ease all 0s;
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
+    }
+    &:hover .header-cart__price {
+        color: $oldPrice-color;
     }
 
     &__icon {
@@ -133,6 +154,7 @@
     &__price {
         font-size: 15px;
         line-height: 18px;
+        transition: 0.3s ease all 0s;
     }
 }
 
