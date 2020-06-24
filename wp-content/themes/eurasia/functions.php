@@ -44,14 +44,6 @@ add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price'
 add_action('woocommerce_after_shop_loop_item', 'wrapper_end', 20);
 add_action('woocommerce_after_shop_loop_item', 'wrapper_end', 21);
 
-// !archive-product.php
-// удаление хлебных крошек
-remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
-
-// удаление количества выведенных товаров, удаление сортировки товаров
-remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
-
 function product_img_wrapper_start()
 {
 	echo '<div class="product-img">';
@@ -69,6 +61,34 @@ function wrapper_end()
 	echo '</div>';
 }
 
+// !archive-product.php
+// удаление хлебных крошек
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+
+// удаление количества выведенных товаров, удаление сортировки товаров
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+// удаление лейбла с распродажей
+remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
+
+// изменение структуры вывода продуктов и категорий на странице shop
+remove_filter('woocommerce_product_loop_start', 'woocommerce_maybe_show_product_subcategories');
+add_action('woocommerce_before_shop_loop', 'eurasia_show_category', 40);
+function eurasia_show_category()
+{
+	if(is_shop()){
+		echo '<div class="product-menu product-menu--page-shop">';
+	} else {
+		echo '<div class="product-menu">';
+	}
+	echo '<div class="woocommerce">';
+	woocommerce_product_loop_start();
+	echo woocommerce_maybe_show_product_subcategories();
+	woocommerce_product_loop_end();
+	echo '</div>';
+	echo '</div>';
+}
 
 
 

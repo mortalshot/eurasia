@@ -28,7 +28,15 @@ body {
 .fw-row:before,
 .fw-row:after,
 .dl-horizontal dd:before,
-.dl-horizontal dd:after {
+.dl-horizontal dd:after,
+.woocommerce .products ul::after,
+.woocommerce .products ul::before,
+.woocommerce ul.products::after,
+.woocommerce ul.products::before,
+.woocommerce ul.products::after,
+.woocommerce ul.products::before,
+.woocommerce-page ul.products::after,
+.woocommerce-page ul.products::before {
     display: none !important;
 }
 

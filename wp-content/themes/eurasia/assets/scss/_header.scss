@@ -45,7 +45,7 @@
             height: 25px;
         }
         &:hover {
-            color: $oldPrice-color;
+            color: $hover-color;
         }
     }
 }
@@ -112,14 +112,14 @@
             position: absolute;
             bottom: -7px;
             left: 0;
-            background: $oldPrice-color;
+            background: $hover-color;
             opacity: 0;
             height: 3px;
             transition: 0.3s ease all 0s;
             width: 100%;
         }
         &:hover {
-            color: $oldPrice-color;
+            color: $hover-color;
             &::after {
                 opacity: 1;
             }
@@ -145,7 +145,7 @@
         text-decoration: none;
     }
     &:hover .header-cart__price {
-        color: $oldPrice-color;
+        color: $hover-color;
     }
 
     &__icon {
