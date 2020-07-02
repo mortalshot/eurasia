@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     //header sticky
     var navOffset = $('.header-bottom').offset().top;
+    // alert (navOffset);
     $(window).scroll(function () {
         var scrolled = $(this).scrollTop();
+        console.log(scrolled);
         if (scrolled > navOffset) {
             //шапка прилипла
             $('.header').addClass('nav-fixed');
@@ -77,4 +79,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     ibg();
+
 });

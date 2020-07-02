@@ -77,7 +77,7 @@ remove_filter('woocommerce_product_loop_start', 'woocommerce_maybe_show_product_
 add_action('woocommerce_before_shop_loop', 'eurasia_show_category', 40);
 function eurasia_show_category()
 {
-	if(is_shop()){
+	if (is_shop()) {
 		echo '<div class="product-menu product-menu--page-shop">';
 	} else {
 		echo '<div class="product-menu">';
@@ -90,6 +90,15 @@ function eurasia_show_category()
 	echo '</div>';
 }
 
+// Динамическое изменение суммы корзины в хедере страницы
+add_filter('woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
+function woocommerce_header_add_to_cart_fragment($fragments)
+{
+	ob_start(); ?>
+	<div class="header-cart__price"><?php echo WC()->cart->get_cart_total() ?></div>
+<?php $fragments['.header-cart__price'] = ob_get_clean();
+	return $fragments;
+}
 
 
 if (!function_exists('eurasia_setup')) :

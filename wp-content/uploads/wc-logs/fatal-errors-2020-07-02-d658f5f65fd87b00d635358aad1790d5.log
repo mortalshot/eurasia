@@ -1,0 +1,11 @@
+2020-07-02T19:56:20+00:00 CRITICAL syntax error, unexpected ')' в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\woocommerce\cart\cart.php на строке 89
+
+2020-07-02T19:56:32+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on string in E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-template-functions.php:1683
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\woocommerce\cart\cart.php(88): woocommerce_quantity_input(Array, '<button class="...', Object(WC_Product_Simple), '<button class="...', false)
+#1 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-core-functions.php(251): include('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#3 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#4 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#5 E:\OpenServer\domains\Eurasia\wp-includes\shortcodes.php(343): WC_Shortcodes:: в E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-template-functions.php на строке 1683
+

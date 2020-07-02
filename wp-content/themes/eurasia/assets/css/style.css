@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-size: 13px;
@@ -7,10 +11,28 @@ body {
   color: #F4F4F4;
   background-color: #161616;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body.lock {
   overflow: hidden;
+}
+
+body .site {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .site .site-main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .container,
@@ -614,6 +636,16 @@ li {
   text-align: center;
 }
 
+.footer-navigation .menu-item {
+  padding: 0 32.5px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-navigation .menu-item {
+    padding: 0 15px;
+  }
+}
+
 .footer-navigation .menu-item a {
   font-size: 15px;
   line-height: 18px;
@@ -868,6 +900,27 @@ li {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .best-selling-products,
+  .recent-products {
+    margin-bottom: 74px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .best-selling-products .slick-list,
+  .recent-products .slick-list {
+    padding: 26px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .best-selling-products .fw-special-title,
+  .recent-products .fw-special-title {
+    margin-bottom: 0.18em;
+  }
+}
+
 .product-cards .woocommerce .products .slick-track {
   -webkit-box-align: inherit;
       -ms-flex-align: inherit;
@@ -1055,6 +1108,10 @@ li {
 
 .product-cards .woocommerce .products .product .product-content .product-footer .ajax_add_to_cart:hover {
   background: url(../img/icons/slider/plus1.svg) 50% 50% no-repeat;
+}
+
+.product-cards .woocommerce .products .product .product-content .product-footer .added_to_cart {
+  display: none;
 }
 
 .product-cards .woocommerce .products .product .product-content .product-footer .product_type_simple[aria-label*="Прочитайте больше"] {

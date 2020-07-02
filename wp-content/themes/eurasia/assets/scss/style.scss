@@ -169,6 +169,22 @@
         }
     }
 }
+.best-selling-products,
+.recent-products {
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 74px;
+    }
+    .slick-list {
+        @media screen and (min-width: 1200px) {
+            padding: 26px 0;
+        }
+    }
+    .fw-special-title {
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0.18em;
+        }
+    }
+}
 
 .product-cards {
     .woocommerce {
@@ -286,6 +302,9 @@
                             &:hover {
                                 background: url(../img/icons/slider/plus1.svg) 50% 50% no-repeat;
                             }
+                        }
+                        .added_to_cart {
+                            display: none;
                         }
                         .product_type_simple[aria-label*="Прочитайте больше"] {
                             display: none;
