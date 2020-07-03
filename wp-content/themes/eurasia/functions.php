@@ -90,6 +90,24 @@ function eurasia_show_category()
 	echo '</div>';
 }
 
+// !cart.php
+/* View Cart, Update Cart, Proceed to Checkout */
+function tb_text_strings( $translated_text, $text, $domain ) {
+    switch ( $translated_text ) {
+        case 'Подытог' :
+            $translated_text = __( 'Итого:', 'woocommerce' );
+            break;
+        case 'Итого' :
+            $translated_text = __( 'К оплате:', 'woocommerce' );
+            break;
+        case 'Оформить заказ' :
+            $translated_text = __( 'Заказать', 'woocommerce' );
+            break;
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'tb_text_strings', 20, 3 );
+
 // Динамическое изменение суммы корзины в хедере страницы
 add_filter('woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
 function woocommerce_header_add_to_cart_fragment($fragments)

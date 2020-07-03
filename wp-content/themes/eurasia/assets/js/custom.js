@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // alert (navOffset);
     $(window).scroll(function () {
         var scrolled = $(this).scrollTop();
-        console.log(scrolled);
         if (scrolled > navOffset) {
             //шапка прилипла
             $('.header').addClass('nav-fixed');

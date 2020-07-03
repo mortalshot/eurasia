@@ -1,0 +1,11 @@
+2020-07-03T14:07:17+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Coupon as array in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\woocommerce\cart\cart-totals.php:35
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-core-functions.php(251): include()
+#1 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2018): wc_get_template('cart/cart-total...')
+#2 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(287): woocommerce_cart_totals('')
+#3 E:\OpenServer\domains\Eurasia\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#4 E:\OpenServer\domains\Eurasia\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#5 E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\woocommerce\cart\cart.php(162): do_action('woocommerce_car...')
+#6 E:\OpenServer\domains\Eurasia\wp-content\plugins\woocommerce\includes\wc-core-functions.php(251): include('E:\\OpenServer\\d...')
+#7 E:\OpenServer\domains\Eurasia\wp-content\plugins\wo в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\woocommerce\cart\cart-totals.php на строке 35
+
