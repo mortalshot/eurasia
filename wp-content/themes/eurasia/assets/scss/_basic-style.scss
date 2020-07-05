@@ -29,6 +29,11 @@ body {
     margin: 0 auto;
 }
 
+.row, .fw-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .fw-row:before,
 .fw-row:after,
 .clearfix:before,
@@ -115,4 +120,8 @@ li {
     font-weight: 700;
     padding: 0px 0px 17px 0px;
     text-align: center;
+}
+
+.strong {
+    font-weight: 600;
 }

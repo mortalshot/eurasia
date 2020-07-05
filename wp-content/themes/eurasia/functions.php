@@ -91,22 +91,23 @@ function eurasia_show_category()
 }
 
 // !cart.php
-/* View Cart, Update Cart, Proceed to Checkout */
-function tb_text_strings( $translated_text, $text, $domain ) {
-    switch ( $translated_text ) {
-        case 'Подытог' :
-            $translated_text = __( 'Итого:', 'woocommerce' );
-            break;
-        case 'Итого' :
-            $translated_text = __( 'К оплате:', 'woocommerce' );
-            break;
-        case 'Оформить заказ' :
-            $translated_text = __( 'Заказать', 'woocommerce' );
-            break;
-    }
-    return $translated_text;
+/* Изменение названий полей */
+function tb_text_strings($translated_text, $text, $domain)
+{
+	switch ($translated_text) {
+		case 'Подытог':
+			$translated_text = __('Итого:', 'woocommerce');
+			break;
+		case 'Итого':
+			$translated_text = __('К оплате:', 'woocommerce');
+			break;
+		case 'Оформить заказ':
+			$translated_text = __('Заказать', 'woocommerce');
+			break;
+	}
+	return $translated_text;
 }
-add_filter( 'gettext', 'tb_text_strings', 20, 3 );
+add_filter('gettext', 'tb_text_strings', 20, 3);
 
 // Динамическое изменение суммы корзины в хедере страницы
 add_filter('woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
@@ -118,6 +119,37 @@ function woocommerce_header_add_to_cart_fragment($fragments)
 	return $fragments;
 }
 
+// !checkout.php
+/* Удаление купона */
+remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10);
+
+/* qwerty */
+add_filter('woocommerce_checkout_fields', 'eurasia_override_checkout_fields');
+function eurasia_override_checkout_fields($fields)
+{
+	unset($fields['billing']['billing_last_name']);
+	unset($fields['shipping']['shipping_last_name']);
+	unset($fields['billing']['billing_country']);
+	unset($fields['shipping']['shipping_country']);
+	unset($fields['billing']['billing_city']);
+	unset($fields['shipping']['shipping_city']);
+	unset($fields['billing']['billing_postcode']);
+	unset($fields['shipping']['shipping_postcode']);
+	unset($fields['billing']['billing_state']);
+	unset($fields['shipping']['shipping_state']);
+	return $fields;
+}
+
+/* Изменение полей оформления заказа */
+add_action('woocommerce_default_address_fields', 'eurasia_default_checkout_fields');
+function eurasia_default_checkout_fields($fields)
+{
+	// echo 'eurasia_default_checkout_fields';
+	// echo '<pre>';
+	// print_r($fields);
+	// echo '</pre>';
+	return $fields;
+}
 
 if (!function_exists('eurasia_setup')) :
 	/**
