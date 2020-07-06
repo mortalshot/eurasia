@@ -29,11 +29,6 @@ body {
     margin: 0 auto;
 }
 
-.row, .fw-row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .fw-row:before,
 .fw-row:after,
 .clearfix:before,

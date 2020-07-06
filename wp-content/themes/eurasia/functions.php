@@ -104,6 +104,9 @@ function tb_text_strings($translated_text, $text, $domain)
 		case 'Оформить заказ':
 			$translated_text = __('Заказать', 'woocommerce');
 			break;
+		case 'Оплата и доставка':
+			$translated_text = __('Контактные данные', 'woocommerce');
+			break;
 	}
 	return $translated_text;
 }
@@ -123,7 +126,7 @@ function woocommerce_header_add_to_cart_fragment($fragments)
 /* Удаление купона */
 remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10);
 
-/* qwerty */
+/* Удаление лишних полей оформления заказа */
 add_filter('woocommerce_checkout_fields', 'eurasia_override_checkout_fields');
 function eurasia_override_checkout_fields($fields)
 {
@@ -140,15 +143,18 @@ function eurasia_override_checkout_fields($fields)
 	return $fields;
 }
 
-/* Изменение полей оформления заказа */
-add_action('woocommerce_default_address_fields', 'eurasia_default_checkout_fields');
-function eurasia_default_checkout_fields($fields)
-{
-	// echo 'eurasia_default_checkout_fields';
-	// echo '<pre>';
-	// print_r($fields);
-	// echo '</pre>';
-	return $fields;
+/* Изменение текста placeholder для полей */
+add_filter('woocommerce_default_address_fields', 'override_default_address_checkout_fields', 20, 1);
+function override_default_address_checkout_fields( $address_fields ) {
+    $address_fields['first_name']['placeholder'] = 'Ваше имя';
+    $address_fields['address_1']['placeholder'] = 'Адрес доставки';
+    return $address_fields;
+}
+add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
+function override_billing_checkout_fields( $fields ) {
+    $fields['billing']['billing_phone']['placeholder'] = 'Номер телефона';
+    $fields['billing']['billing_email']['placeholder'] = 'E-mail';
+    return $fields;
 }
 
 if (!function_exists('eurasia_setup')) :
