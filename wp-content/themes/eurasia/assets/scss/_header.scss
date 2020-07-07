@@ -29,7 +29,7 @@
     line-height: calc(23 / 15);
     text-align: center;
 }
-.header-phone {
+.phone {
     &__link {
         color: $text-color;
         font-weight: bold;
@@ -37,15 +37,19 @@
         line-height: calc(30 / 25);
         text-decoration: none;
         transition: 0.3s ease all 0s;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+.header-phone {
+    &__link {
         @media screen and (max-width: 450px) {
             font-size: 0;
             background: url(../img/icons/header/2.svg) no-repeat;
             display: block;
             width: 24px;
             height: 25px;
-        }
-        &:hover {
-            color: $hover-color;
         }
     }
 }
@@ -133,12 +137,15 @@
     }
 }
 
-.header-cart {
+.header-cart-wrapper {
+    flex: 0 0 120px;
     display: flex;
     align-items: center;
-    color: $text-color;
-    flex: 0 0 120px;
     justify-content: flex-end;
+}
+.header-cart {
+    display: flex;
+    color: $text-color;
     z-index: 10;
     transition: 0.3s ease all 0s;
     &:hover {

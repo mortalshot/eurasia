@@ -145,16 +145,18 @@ function eurasia_override_checkout_fields($fields)
 
 /* Изменение текста placeholder для полей */
 add_filter('woocommerce_default_address_fields', 'override_default_address_checkout_fields', 20, 1);
-function override_default_address_checkout_fields( $address_fields ) {
-    $address_fields['first_name']['placeholder'] = 'Ваше имя';
-    $address_fields['address_1']['placeholder'] = 'Адрес доставки';
-    return $address_fields;
+function override_default_address_checkout_fields($address_fields)
+{
+	$address_fields['first_name']['placeholder'] = 'Ваше имя';
+	$address_fields['address_1']['placeholder'] = 'Адрес доставки';
+	return $address_fields;
 }
-add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
-function override_billing_checkout_fields( $fields ) {
-    $fields['billing']['billing_phone']['placeholder'] = 'Номер телефона';
-    $fields['billing']['billing_email']['placeholder'] = 'E-mail';
-    return $fields;
+add_filter('woocommerce_checkout_fields', 'override_billing_checkout_fields', 20, 1);
+function override_billing_checkout_fields($fields)
+{
+	$fields['billing']['billing_phone']['placeholder'] = 'Номер телефона';
+	$fields['billing']['billing_email']['placeholder'] = 'E-mail';
+	return $fields;
 }
 
 if (!function_exists('eurasia_setup')) :

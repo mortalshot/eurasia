@@ -134,7 +134,7 @@ do_action('woocommerce_before_cart'); ?>
             <div class="actions">
                 <?php if (wc_coupons_enabled()) { ?>
                     <div class="coupon">
-                        <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Введите промокод" />
+                        <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Промокод" />
                         <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e('Apply coupon', 'woocommerce'); ?>">Применить</button>
                         <?php do_action('woocommerce_cart_coupon'); ?>
                     </div>

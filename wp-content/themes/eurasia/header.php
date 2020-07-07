@@ -39,7 +39,7 @@
 						<div class="information__hours"><?php echo get_theme_mod('eurasia_hours') ?></div>
 					</div>
 
-					<div class="header-phone"><a class="header-phone__link" href="tel:<?php echo get_theme_mod('eurasia_phone') ?>"><?php echo get_theme_mod('eurasia_phone') ?></a></div>
+					<div class="phone header-phone"><a class="phone__link header-phone__link" href="tel:<?php echo get_theme_mod('eurasia_phone') ?>"><?php echo get_theme_mod('eurasia_phone') ?></a></div>
 
 				</div>
 
@@ -60,13 +60,15 @@
 							); ?>
 						</nav>
 
-						<a class="header-cart" href="<?php echo get_page_link('7'); ?>">
-							<div class="header-cart__icon"><img src="<?php echo get_template_directory_uri() . '/assets/img/icons/header/1.svg' ?>" alt=""></div>
-							<div class="header-cart__price"><?php echo WC()->cart->get_cart_subtotal(); ?></div>
-							
-						</a>
+						<div class="header-cart-wrapper">
+							<a class="header-cart" href="<?php echo get_page_link('7'); ?>">
+								<div class="header-cart__icon"><img src="<?php echo get_template_directory_uri() . '/assets/img/icons/header/1.svg' ?>" alt=""></div>
+								<div class="header-cart__price"><?php echo WC()->cart->get_cart_subtotal(); ?></div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 
 		</header>
+		

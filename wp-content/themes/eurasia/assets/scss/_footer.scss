@@ -1,3 +1,4 @@
+// !footer
 .site-footer {
     background: $card-color;
     padding: 30px 0;
@@ -6,6 +7,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 400px) {
+        flex-direction: column-reverse;
+    }
     .information {
         text-align: right;
     }

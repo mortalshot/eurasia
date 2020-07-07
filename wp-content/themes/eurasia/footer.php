@@ -27,8 +27,8 @@
 						); ?>
 					</nav>
 				</div>
-				<div class="information">
-					<div class="header-phone"><a class="header-phone__link" href="tel:<?php echo get_theme_mod('eurasia_phone') ?>"><?php echo get_theme_mod('eurasia_phone') ?></a></div>
+				<div data-da="footer-bottom, 0, 575" class="information">
+					<div class="phone"><a class="phone__link footer-phone__link" href="tel:<?php echo get_theme_mod('eurasia_phone') ?>"><?php echo get_theme_mod('eurasia_phone') ?></a></div>
 					<div class="information__address"><?php echo get_theme_mod('eurasia_address') ?></div>
 					<div class="information__hours"><?php echo get_theme_mod('eurasia_hours') ?></div>
 				</div>

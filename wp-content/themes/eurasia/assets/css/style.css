@@ -194,7 +194,7 @@ li {
   text-align: center;
 }
 
-.header-phone__link {
+.phone__link {
   color: #F4F4F4;
   font-weight: bold;
   font-size: calc(18px + 7 * ((100vw - 320px) / (1920 - 320)));
@@ -202,6 +202,10 @@ li {
   text-decoration: none;
   -webkit-transition: 0.3s ease all 0s;
   transition: 0.3s ease all 0s;
+}
+
+.phone__link:hover {
+  color: #E0A532;
 }
 
 @media screen and (max-width: 450px) {
@@ -212,10 +216,6 @@ li {
     width: 24px;
     height: 25px;
   }
-}
-
-.header-phone__link:hover {
-  color: #E0A532;
 }
 
 .header-bottom {
@@ -336,20 +336,26 @@ li {
   }
 }
 
-.header-cart {
+.header-cart-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 120px;
+          flex: 0 0 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #F4F4F4;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 120px;
-          flex: 0 0 120px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.header-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #F4F4F4;
   z-index: 10;
   -webkit-transition: 0.3s ease all 0s;
   transition: 0.3s ease all 0s;
@@ -720,7 +726,7 @@ li {
 
 @media screen and (max-width: 768px) {
   .product-menu {
-    margin-bottom: 10px;
+    margin: 0 0 15px;
   }
 }
 
@@ -913,12 +919,6 @@ li {
 @media screen and (max-width: 768px) {
   .product-cards .woocommerce .products .product {
     margin: 10px !important;
-  }
-}
-
-@media screen and (max-width: 549px) {
-  .product-cards .woocommerce .products .product {
-    margin: 10px 0 !important;
   }
 }
 
@@ -1188,6 +1188,15 @@ li {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 400px) {
+  .footer-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .footer-top .information {
   text-align: right;
 }
@@ -1433,6 +1442,14 @@ li {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .woocommerce .woocommerce-cart-form .shop_table tbody .cart_item .product-quantity {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
 .woocommerce .woocommerce-cart-form .shop_table tbody .cart_item .product-quantity .qib-container {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -1643,6 +1660,7 @@ li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 60px;
+  width: 100%;
   max-width: 234px;
   font-family: "Montserrat";
   font-weight: 400;
@@ -1653,6 +1671,7 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -1695,7 +1714,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0;
+  padding: 0 10px;
   font-family: "Montserrat";
   font-weight: 600;
   font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));
@@ -1729,6 +1748,9 @@ li {
 .woocommerce .cart-collaterals .collaterals-wrapper .cart_totals .shop_table tbody {
   margin: 44px 0px 0px 0px;
   letter-spacing: 1px;
+  float: right;
+  width: 100%;
+  max-width: 300px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1744,6 +1766,9 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .woocommerce .cart-collaterals .collaterals-wrapper .cart_totals .shop_table tbody .cart-discount td {
@@ -1791,7 +1816,6 @@ li {
   content: "";
   display: block;
   width: 100%;
-  max-width: 327px;
   height: 2px;
   background: #F4F4F4;
   position: absolute;
@@ -1846,6 +1870,12 @@ li {
   transition: 0.3s ease all 0s;
 }
 
+@media screen and (max-width: 768px) {
+  .woocommerce .cart-collaterals .collaterals-wrapper .cart_totals .wc-proceed-to-checkout .button {
+    height: 50px;
+  }
+}
+
 .woocommerce .cart-collaterals .collaterals-wrapper .cart_totals .wc-proceed-to-checkout .button:hover {
   background-color: transparent;
   color: #F4F4F4;
@@ -1856,9 +1886,9 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 5px 0;
   font-family: "Montserrat";
   font-size: calc(18px + 7 * ((100vw - 320px) / (1920 - 320)));
@@ -1869,9 +1899,7 @@ li {
   border: none;
   padding: 0;
   font-weight: 400;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1885,8 +1913,8 @@ li {
   padding: 0;
   font-weight: 600;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 175px;
-          flex: 0 0 175px;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
 }
 
 @media screen and (max-width: 768px) {
@@ -2150,6 +2178,9 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 16px;
 }
 
@@ -2171,6 +2202,9 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 210px;
           flex: 0 1 210px;
@@ -2347,7 +2381,7 @@ li {
 
 @media screen and (max-width: 1199px) {
   .contacts {
-    padding: 12px 0 50px;
+    padding: 12px 0 30px;
   }
 }
 
@@ -2357,9 +2391,19 @@ li {
           align-items: center;
 }
 
-@media screen and (min-width: 1200px) {
+.contacts .fw-col-sm-6 {
+  padding: 0;
+}
+
+@media screen and (min-width: 991px) {
   .contacts .contact-column {
-    padding-left: 85px;
+    padding-left: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .contacts .contact-column {
+    padding-left: 15px;
   }
 }
 
@@ -2368,9 +2412,16 @@ li {
 }
 
 .contacts .fw-heading .fw-special-title {
+  font-size: calc(23px + 17 * ((100vw - 320px) / (1920 - 320)));
   padding: 0;
   margin: 25px 0px;
   text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts .fw-heading .fw-special-title {
+    margin: 25px 0px 8px;
+  }
 }
 
 .contacts .contacts-text {
@@ -2381,6 +2432,10 @@ li {
 
 .contacts .contacts-text .item {
   padding: 10px 0;
+}
+
+.contacts .contacts-text .item a {
+  color: #F4F4F4;
 }
 
 .delivery {
@@ -2437,4 +2492,12 @@ li {
 
 .delivery .delivery-text__pay {
   letter-spacing: 1.7px;
+}
+
+.special .fw-container, .special .fw-col-xs-12 {
+  padding: 0;
+}
+
+.special .fw-row {
+  margin: 0;
 }
