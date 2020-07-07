@@ -1,2 +1,58 @@
 2020-07-07T11:33:56+00:00 CRITICAL Cannot redeclare true_add_ajax_comment() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:164) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 139
 
+2020-07-07T17:33:03+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on null in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php:18
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\template-loader.php(106): include()
+#1 E:\OpenServer\domains\Eurasia\wp-blog-header.php(19): require_once('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\index.php(17): require('E:\\OpenServer\\d...')
+#3 {main}
+  thrown в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 18
+
+2020-07-07T17:34:16+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on null in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php:25
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\template-loader.php(106): include()
+#1 E:\OpenServer\domains\Eurasia\wp-blog-header.php(19): require_once('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\index.php(17): require('E:\\OpenServer\\d...')
+#3 {main}
+  thrown в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 25
+
+2020-07-07T17:34:17+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on null in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php:25
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\template-loader.php(106): include()
+#1 E:\OpenServer\domains\Eurasia\wp-blog-header.php(19): require_once('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\index.php(17): require('E:\\OpenServer\\d...')
+#3 {main}
+  thrown в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 25
+
+2020-07-07T17:34:23+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on null in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php:25
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\template-loader.php(106): include()
+#1 E:\OpenServer\domains\Eurasia\wp-blog-header.php(19): require_once('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\index.php(17): require('E:\\OpenServer\\d...')
+#3 {main}
+  thrown в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 25
+
+2020-07-07T17:34:54+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on null in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php:27
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\template-loader.php(106): include()
+#1 E:\OpenServer\domains\Eurasia\wp-blog-header.php(19): require_once('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\index.php(17): require('E:\\OpenServer\\d...')
+#3 {main}
+  thrown в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 27
+
+2020-07-07T17:36:16+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on null in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php:16
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\template-loader.php(106): include()
+#1 E:\OpenServer\domains\Eurasia\wp-blog-header.php(19): require_once('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\index.php(17): require('E:\\OpenServer\\d...')
+#3 {main}
+  thrown в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 16
+
+2020-07-07T17:40:35+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on null in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php:14
+Stack trace:
+#0 E:\OpenServer\domains\Eurasia\wp-includes\template-loader.php(106): include()
+#1 E:\OpenServer\domains\Eurasia\wp-blog-header.php(19): require_once('E:\\OpenServer\\d...')
+#2 E:\OpenServer\domains\Eurasia\index.php(17): require('E:\\OpenServer\\d...')
+#3 {main}
+  thrown в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\page-reviews.php на строке 14
+

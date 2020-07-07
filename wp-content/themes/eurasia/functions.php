@@ -107,6 +107,12 @@ function tb_text_strings($translated_text, $text, $domain)
 		case 'Оплата и доставка':
 			$translated_text = __('Контактные данные', 'woocommerce');
 			break;
+		case 'Отправить комментарий':
+			$translated_text = __('Добавить отзыв', 'woocommerce');
+			break;
+		case 'Ваш адрес email не будет опубликован.':
+			$translated_text = __('Ваш адрес электронной почты не будет указываться в общем доступе.', 'woocommerce');
+			break;
 	}
 	return $translated_text;
 }
@@ -158,6 +164,109 @@ function override_billing_checkout_fields($fields)
 	$fields['billing']['billing_email']['placeholder'] = 'E-mail';
 	return $fields;
 }
+
+/* Добавление звездочек к комментарию на странице отзывов */
+add_action('comment_form_logged_in_after', 'comm_rating_rating_field');
+add_action('comment_form_after_fields', 'comm_rating_rating_field');
+function comm_rating_rating_field()
+{ ?>
+	<div class="comment-rating" data-total-value="0">
+		<?php for ($i = 5; $i >= 1; $i--) : ?>
+			<span class="comment-rating__item" data-item-value="<?php echo esc_attr($i); ?>">
+				<input type="radio" id="rating-<?php echo esc_attr($i); ?>" name="rating" value="<?php echo esc_attr($i); ?>" /><label for="rating-<?php echo esc_attr($i); ?>"></label>
+			</span>
+		<?php endfor; ?>
+	</div>
+<?php
+}
+//Сохранение результата
+add_action('comment_post', 'comm_rating_save_comment_rating');
+function comm_rating_save_comment_rating($comment_id)
+{
+	if ((isset($_POST['rating'])) && ('' !== $_POST['rating']))
+		$rating = intval($_POST['rating']);
+	add_comment_meta($comment_id, 'rating', $rating);
+}
+//required на рейтинг
+add_filter('preprocess_comment', 'comm_rating_require_rating');
+function comm_rating_require_rating($commentdata)
+{
+	if (!isset($_POST['rating']) || 0 === intval($_POST['rating']))
+		wp_die('Ошибка: Вы не добавили оценку. Нажмите кнопку «Назад» в своем веб-браузере и повторно отправьте свой комментарий с оценкой.');
+	return $commentdata;
+}
+//Отображение рейтинга в комментариях
+add_filter('comment_text', 'comm_rating_display_rating');
+function comm_rating_display_rating($comment_text)
+{
+	if ($rating = get_comment_meta(get_comment_ID(), 'rating', true)) {
+		$stars = '<div class="rating">';
+		for ($i = 0; $i < 5; $i++) {
+			if ($i < $rating) {
+				$stars .= '<span class="rating__icon active"></span>';
+			} else {
+				$stars .= '<span class="rating__icon"></span>';
+			}
+		}
+		$stars .= '</div>';
+		$comment_text = $comment_text . $stars;
+		return $comment_text;
+	} else {
+		return $comment_text;
+	}
+}
+
+/* Изменение порядка полей */
+function sort_comment_fields($fields)
+{
+	$new_fields = array();
+	$myorder = array('author', 'email', 'url', 'comment');
+
+	foreach ($myorder as $key) {
+		$new_fields[$key] = $fields[$key];
+		unset($fields[$key]);
+	}
+
+	if ($fields)
+		foreach ($fields as $key => $val)
+			$new_fields[$key] = $val;
+	return $new_fields;
+}
+add_filter('comment_form_fields', 'sort_comment_fields');
+
+/* Добавление placeholder в поля комментариев */
+function my_update_fields($fields)
+{
+	$commenter = wp_get_current_commenter();
+	$req = get_option('require_name_email');
+	$aria_req = ($req ? " aria-required='true'" : '');
+
+	$fields['author'] =
+		'<p class="comment-form-author">
+            <input required minlength="3" maxlength="30" placeholder="Ваше имя" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) .
+		'" size="30"' . $aria_req . ' />
+        </p>';
+
+	$fields['email'] =
+		'<p class="comment-form-email">
+            <input required placeholder="E-mail" id="email" name="email" type="email" value="' . esc_attr($commenter['comment_author_email']) .
+		'" size="30"' . $aria_req . ' />
+        </p>';
+
+	return $fields;
+}
+add_filter('comment_form_default_fields', 'my_update_fields');
+function my_update_comment_field($comment_field)
+{
+	$comment_field =
+		'<p class="comment-form-comment">
+            <textarea required placeholder="Отзыв" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+        </p>';
+
+	return $comment_field;
+}
+add_filter('comment_form_field_comment', 'my_update_comment_field');
+
 
 if (!function_exists('eurasia_setup')) :
 	/**

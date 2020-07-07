@@ -1,0 +1,439 @@
+// !cart
+.woocommerce {
+    .woocommerce-cart-form {
+        padding: 62px 0 100px;
+        display: flex;
+        @media screen and (max-width: 1199px) {
+            padding: 12px 0 50px;
+        }
+        @media screen and (max-width: 1000px) {
+            flex-wrap: wrap;
+        }
+        & > .shop_table {
+            position: relative;
+            flex: 1 1 66.666%;
+            padding-right: 15px;
+            &::after {
+                content: "";
+                width: 2px;
+                height: 100%;
+                display: block;
+                background: $text-color;
+                border-radius: 5px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            @media screen and (max-width: 1000px) {
+                flex: 1 1 100%;
+                padding-right: 0;
+                margin-bottom: 50px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        .shop_table {
+            border: none;
+            tbody {
+                color: $text-color;
+                font-weight: 600;
+                font-size: calc(12px + 8 * ((100vw - 320px) / (1920 - 320)));
+                line-height: calc(24 / 20);
+                display: block;
+                margin: -25px 0;
+                .cart_item {
+                    display: flex;
+                    align-items: center;
+                    padding: 25px 0;
+                    margin: 0 -10px;
+                    @media screen and (max-width: 768px) {
+                        padding: 15px 0;
+                    }
+                    td {
+                        flex: 0 1 138px;
+                        display: flex;
+                        justify-content: center;
+                        padding: 0 10px;
+                        @media screen and (min-width: 1001px) and (max-width: 1200px) {
+                            flex: 0 0 100px;
+                        }
+                        @media screen and (max-width: 1000px) {
+                            justify-content: flex-end;
+                        }
+                        @media screen and (max-width: 768px) {
+                            &::before {
+                                display: none;
+                            }
+                            text-align: left !important;
+                        }
+                        @media screen and (max-width: 550px) {
+                            flex: 0 1 40px;
+                            padding: 0 5px;
+                        }
+                    }
+                    .product-thumbnail {
+                        @media screen and (max-width: 1000px) {
+                            justify-content: flex-start;
+                        }
+                        @media screen and (max-width: 680px) {
+                            flex: 0 1 100px;
+                        }
+                        @media screen and (max-width: 450px) {
+                            display: none;
+                        }
+                        img {
+                            border-radius: 20px;
+                            width: 100%;
+                            max-width: 100px;
+                            height: auto;
+                        }
+                    }
+                    .product-name {
+                        flex: 1 1 338px;
+                        justify-content: flex-start;
+                        box-sizing: border-box;
+                        @media screen and (max-width: 1041px) {
+                            flex: 1 0 170px;
+                        }
+                        @media screen and (max-width: 370px) {
+                            flex: 1 0 130px;
+                        }
+                        @media screen and (max-width: 333px) {
+                            flex: 1 0 100px;
+                        }
+                    }
+                    .product-quantity {
+                        @media screen and (max-width: 768px) {
+                            flex: none;
+                        }
+                        .qib-container {
+                            display: flex !important;
+                            align-items: center;
+                            .qib-button:not(#qib_id):not(#qib_id) {
+                                background: transparent;
+                                border: none;
+                                position: relative;
+                                font-size: 0;
+                                width: 30px;
+                                padding: 5px;
+                                cursor: pointer;
+                                transition: 0.3s ease all 0s;
+                                &:hover {
+                                    &::before,
+                                    &::after {
+                                        background: $hover-color;
+                                    }
+                                }
+                                @media screen and (max-width: 450px) {
+                                    width: 26px;
+                                }
+                            }
+                            .minus {
+                                &::before {
+                                    content: "";
+                                    width: 20px;
+                                    height: 3px;
+                                    display: block;
+                                    border-radius: 5px;
+                                    background: $text-color;
+                                    @media screen and (max-width: 450px) {
+                                        width: 16px;
+                                        height: 2px;
+                                    }
+                                }
+                            }
+                            .plus {
+                                &::before,
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    border-radius: 5px;
+                                    background: $text-color;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translate(0, -50%);
+                                }
+                                &::before {
+                                    width: 20px;
+                                    height: 3px;
+                                    @media screen and (max-width: 450px) {
+                                        width: 16px;
+                                        height: 2px;
+                                    }
+                                }
+                                &::after {
+                                    height: 20px;
+                                    width: 3px;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    @media screen and (max-width: 450px) {
+                                        height: 16px;
+                                        width: 2px;
+                                    }
+                                }
+                            }
+                            .quantity:not(#qib_id):not(#qib_id) {
+                                padding: 0 10px;
+                                @media screen and (max-width: 550px) {
+                                    padding: 0 5px;
+                                }
+                                input.qty:not(#qib_id):not(#qib_id) {
+                                    border: 2px solid $text-color;
+                                    border-radius: 5px;
+                                    width: 40px;
+                                    height: 40px;
+                                    font-family: "Montserrat";
+                                    color: $text-color;
+                                    font-weight: 600;
+                                    font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));
+                                    line-height: calc(24 / 20);
+                                    @media screen and (max-width: 450px) {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .product-price {
+                        font-size: calc(14px + 11 * ((100vw - 320px) / (1920 - 320)));
+                        line-height: calc(24 / 20);
+                    }
+                    .product-remove {
+                        @media screen and (max-width: 1020px) {
+                            flex: 0 1 40px;
+                        }
+                        @media screen and (max-width: 1000px) {
+                            flex: 0 1 138px;
+                        }
+                        @media screen and (max-width: 450px) {
+                            flex: inherit;
+                        }
+                        .remove {
+                            font-size: 0;
+                            width: 24px;
+                            height: 25px;
+                            display: block;
+                            padding: 10px;
+                            &::before {
+                                content: "";
+                                background: url(../img/icons/cart/trash.svg) no-repeat;
+                                display: block;
+                                width: 24px;
+                                height: 25px;
+                                transition: 0.3s ease all 0s;
+                                @media screen and (max-width: 450px) {
+                                    transform: scale(0.8);
+                                }
+                            }
+                            &:hover {
+                                background: inherit;
+                                &::before {
+                                    background: url(../img/icons/cart/trash-color.svg) no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cart-collaterals {
+        padding-left: 15px;
+        flex: 1 1 33.333%;
+        &::before,
+        &::after {
+            display: none;
+        }
+        @media screen and (max-width: 1000px) {
+            padding: 0;
+        }
+        .collaterals-wrapper {
+            .coupon {
+                display: flex;
+                justify-content: flex-end;
+                .input-text {
+                    background: transparent;
+                    border: 2px solid $text-color;
+                    border-right: none;
+                    border-radius: 10px 0 0 10px;
+                    box-sizing: border-box;
+                    height: 60px;
+                    width: 100%;
+                    max-width: 234px;
+                    font-family: "Montserrat";
+                    font-weight: 400;
+                    font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));
+                    line-height: calc(24 / 20);
+                    color: $text-color;
+                    padding: 0 15px;
+                    display: flex;
+                    text-align: center;
+                    @media screen and (max-width: 768px) {
+                        height: 50px;
+                    }
+                    &::placeholder {
+                        color: $text-color;
+                    }
+                }
+                .button {
+                    background: transparent;
+                    border: 2px solid $hover-color;
+                    border-radius: 0 10px 10px 0;
+                    box-sizing: border-box;
+                    height: 60px;
+                    width: 100%;
+                    max-width: 158px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10px;
+                    font-family: "Montserrat";
+                    font-weight: 600;
+                    font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));
+                    line-height: calc(24 / 20);
+                    color: $text-color;
+                    transition: 0.3s ease all 0s;
+                    @media screen and (max-width: 768px) {
+                        height: 50px;
+                    }
+                    &:hover {
+                        background: $hover-color;
+                        color: $bg-color;
+                    }
+                }
+            }
+            .cart_totals {
+                float: none;
+                width: inherit;
+                .shop_table {
+                    text-align: right;
+                    margin: 0;
+                    tbody {
+                        margin: 44px 0px 0px 0px;
+                        letter-spacing: 1px;
+                        float: right;
+                        width: 100%;
+                        max-width: 300px;
+                        @media screen and (max-width: 1000px) {
+                            margin-top: 10px;
+                        }
+                        .cart-discount {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            td {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                            }
+                            .woocommerce-remove-coupon {
+                                font-size: 0;
+                                position: relative;
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;
+                                padding: 5px;
+                                margin-left: 8px;
+                                &::before {
+                                    content: "";
+                                    background: url(../img/icons/cart/close.svg) no-repeat;
+                                    display: block;
+                                    width: 14px;
+                                    height: 14px;
+                                    transition: 0.3s ease all 0s;
+                                }
+                                &:hover {
+                                    &::before {
+                                        background: url(../img/icons/cart/close-hover.svg) no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                        .order-total {
+                            position: relative;
+                            padding: 15px 0;
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                height: 2px;
+                                background: $text-color;
+                                position: absolute;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+                .wc-proceed-to-checkout {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 0;
+                    margin-top: 14px;
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                    @media screen and (max-width: 1000px) {
+                        margin-top: 0;
+                    }
+                    .button {
+                        background-color: $hover-color;
+                        color: $bg-color;
+                        border: 2px solid $hover-color;
+                        border-radius: 10px;
+                        font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));
+                        line-height: calc(30 / 25);
+                        font-weight: 600;
+                        width: 161px;
+                        height: 54px;
+                        box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.3s ease all 0s;
+                        @media screen and (max-width: 768px) {
+                            height: 50px;
+                        }
+                        &:hover {
+                            background-color: transparent;
+                            color: $text-color;
+                            border: 2px solid $hover-color;
+                        }
+                    }
+                }
+                tr {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 0;
+                    font-family: "Montserrat";
+                    font-size: calc(18px + 7 * ((100vw - 320px) / (1920 - 320)));
+                    line-height: calc(30 / 25);
+                    th {
+                        border: none;
+                        padding: 0;
+                        font-weight: 400;
+                        width: 100%;
+                        @media screen and (max-width: 768px) {
+                            display: block;
+                        }
+                    }
+                    td {
+                        border: none;
+                        padding: 0;
+                        font-weight: 600;
+                        flex: 0 0 150px;
+                        @media screen and (max-width: 768px) {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
