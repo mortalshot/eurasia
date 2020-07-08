@@ -1,0 +1,4 @@
+2020-07-08T13:34:10+00:00 CRITICAL Cannot redeclare woocommerce_header_add_to_cart_fragment() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:123) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 294
+
+2020-07-08T13:34:11+00:00 CRITICAL Cannot redeclare woocommerce_header_add_to_cart_fragment() (previously declared in E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php:123) в E:\OpenServer\domains\Eurasia\wp-content\themes\eurasia\functions.php на строке 294
+

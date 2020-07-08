@@ -281,13 +281,14 @@
                     }
                     .place-order {
                         padding: 0;
+                        display: flex;
+                        justify-content: flex-end;
                         .woocommerce-terms-and-conditions-wrapper {
                             display: none;
                         }
                         #place_order.button {
                             height: 60px;
-                            width: 100%;
-                            max-width: 337px;
+                            flex: 0 1 337px;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -301,6 +302,7 @@
                             border-radius: 10px;
                             color: $bg-color;
                             margin-bottom: 8px;
+                            padding: 0;
                             transition: 0.3s ease all 0s;
                             &:hover {
                                 background: transparent;

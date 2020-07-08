@@ -39,7 +39,7 @@
                         border-color: $hover-color;
                         color: $hover-color;
                     }
-                    @media screen and (max-width: 400px) {
+                    @media screen and (max-width: 600px) {
                         margin: 5px;
                         padding: 13px 0;
                     }
@@ -73,6 +73,16 @@
             justify-content: center;
             margin: 0 -14px;
             max-width: 1210px;
+            .product-category {
+                width: inherit;
+                margin: 6px;
+                @media screen and (max-width: 768px) {
+                    flex: 0 0 44%;
+                }
+                @media screen and (max-width: 450px) {
+                    flex: 1 1 45%;
+                }
+            }
             &.columns-3 {
                 .product-category {
                     width: inherit;

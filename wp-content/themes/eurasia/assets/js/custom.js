@@ -12,6 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // !mini-cart
+    $('.header-cart-wrapper').hover(function () {
+        $('.mini-cart').addClass('mini-cart--open');
+    }, function () {
+        $('.header-cart-wrapper').data('timer', setTimeout(function () {
+            $('.mini-cart').removeClass('mini-cart--open');
+        }, 200));
+    })
+
     // !burger
     $('.header__burger').click(function (event) {
         $('.header__burger, .main-menu').toggleClass('active')

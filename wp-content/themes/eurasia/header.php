@@ -61,14 +61,18 @@
 						</nav>
 
 						<div class="header-cart-wrapper">
-							<a class="header-cart" href="<?php echo get_page_link('7'); ?>">
-								<div class="header-cart__icon"><img src="<?php echo get_template_directory_uri() . '/assets/img/icons/header/1.svg' ?>" alt=""></div>
-								<div class="header-cart__price"><?php echo WC()->cart->get_cart_subtotal(); ?></div>
-							</a>
+							<div class="mini-cart-wrapper">
+								<a href="<?php echo get_page_link('7'); ?>" class="header-cart">
+									<div class="header-cart__icon"><img src="<?php echo get_template_directory_uri() . '/assets/img/icons/header/1.svg' ?>" alt=""></div>
+									<div class="header-cart__price"><?php echo WC()->cart->get_cart_subtotal(); ?></div>
+								</a>
+								<?php if (!is_page('cart') && !is_page('checkout')) : ?>
+									<div class="mini-cart"><?php the_widget('WC_Widget_Cart', 'title='); ?></div>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 		</header>
-		

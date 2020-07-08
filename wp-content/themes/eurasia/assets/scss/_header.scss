@@ -77,11 +77,6 @@
     @media screen and (max-width: 900px) {
         overflow: auto;
         background: $bg-color;
-        /*  
-            !WARNING
-                !Нужно что-то придумать с этим отступом, выглядит плохо!
-            !WARNING
-        */
         padding: 120px 0 0px 15px;
         margin: 0;
         position: fixed;
@@ -142,29 +137,121 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: relative;
 }
-.header-cart {
-    display: flex;
-    color: $text-color;
-    z-index: 10;
-    transition: 0.3s ease all 0s;
-    &:hover {
-        text-decoration: none;
-    }
-    &:hover .header-cart__price {
-        color: $hover-color;
-    }
-
-    &__icon {
-        margin-right: 10px;
-    }
-    &__price {
-        font-size: 15px;
-        line-height: 18px;
+.mini-cart-wrapper {
+    .header-cart {
+        display: flex;
+        color: $text-color;
+        z-index: 10;
         transition: 0.3s ease all 0s;
+        &:hover {
+            text-decoration: none;
+        }
+        &:hover .header-cart__price {
+            color: $hover-color;
+        }
+
+        &__icon {
+            margin-right: 10px;
+        }
+        &__price {
+            font-size: 15px;
+            line-height: 18px;
+            transition: 0.3s ease all 0s;
+        }
+    }
+    .mini-cart {
+        background: $card-color;
+        box-shadow: 0px 4px 10px rgba(48, 64, 72, 0.25);
+        border-radius: 20px;
+        padding: 10px 15px;
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        top: -100%;
+        right: -15px;
+        width: 360px;
+        z-index: 10;
+        transition: 0.3s ease all 0s;
+        @media screen and (max-width: 450px) {
+            width: 290px;
+        }
+        &--open {
+            opacity: 1;
+            top: 20px;
+            pointer-events: visible;
+        }
+        .widget_shopping_cart {
+            .cart_list {
+                .mini_cart_item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0;
+                    margin: 10px 0;
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                    a.remove {
+                        position: relative;
+                        order: 4;
+                        font-size: 0;
+                        padding: 5px;
+                        display: block;
+                        width: 14px;
+                        height: 15px;
+                        transition: 0.3s ease all 0s;
+                        &:hover {
+                            background: transparent;
+                        }
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 14px;
+                            height: 15px;
+                            background: url(../img/icons/cart/trash-small.svg) no-repeat;
+                        }
+                        &:hover {
+                            &::before {
+                                background: url(../img/icons/cart/trash-small-color.svg) no-repeat;
+                            }
+                        }
+                    }
+                    img {
+                        border-radius: 7px;
+                    }
+                    &__name{
+                        flex: 0 1 50%;
+                    }
+                }
+            }
+            .woocommerce-mini-cart__buttons {
+                display: flex;
+                justify-content: flex-end;
+                &::before,
+                &::after {
+                    display: none;
+                }
+                .checkout {
+                    display: none;
+                }
+                .button {
+                    border: 2px solid $hover-color;
+                    border-radius: 10px;
+                    background: $hover-color;
+                    color: $bg-color;
+                    transition: 0.3s ease all 0s;
+                    &:hover {
+                        background: transparent;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
     }
 }
-
 .header__burger {
     display: none;
     @media screen and (max-width: 900px) {

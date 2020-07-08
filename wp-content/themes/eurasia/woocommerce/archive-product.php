@@ -32,6 +32,12 @@ echo '<div class="container">';
 
 ?>
 
+<?php if (!is_shop()) : ?>
+    <div class="product-menu product-menu--page-shop">
+        <?php echo do_shortcode('[product_categories parent = 0 hide_empty = 1 orderby = none]'); ?>
+    </div>
+<?php endif; ?>
+
 <?php if (apply_filters('woocommerce_show_page_title', true) && !is_shop()) : ?>
     <header class="woocommerce-products-header">
         <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>

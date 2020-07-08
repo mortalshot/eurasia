@@ -6,7 +6,7 @@
 				<?php if ($slide['extra']['link']) : ?>
 					<a href="<?php echo $slide['extra']['link'] ?>" class="item-link">
 					<?php endif; ?>
-					<div class="slider-item__bg" style="background-image: url('<?php echo $slide['src']; ?>');">
+					<div class="slider-item__bg" style="background-image: url('<?php echo $slide['src'] ?>');">
 						<?php if ($slide['title'] || $slide['desc'] || $slide['note']) : ?>
 							<div class="item-wrapper">
 							<?php endif; ?>

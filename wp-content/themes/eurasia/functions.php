@@ -177,7 +177,7 @@ function comm_rating_rating_field()
 			</span>
 		<?php endfor; ?>
 	</div>
-<?php
+	<?php
 }
 //Сохранение результата
 add_action('comment_post', 'comm_rating_save_comment_rating');
@@ -266,6 +266,7 @@ function my_update_comment_field($comment_field)
 	return $comment_field;
 }
 add_filter('comment_form_field_comment', 'my_update_comment_field');
+
 
 
 if (!function_exists('eurasia_setup')) :
