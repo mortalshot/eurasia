@@ -11,6 +11,7 @@
         }
         & > .shop_table {
             position: relative;
+            display: flex;
             flex: 1 1 66.666%;
             padding-right: 15px;
             &::after {
@@ -41,6 +42,7 @@
                 font-size: calc(12px + 8 * ((100vw - 320px) / (1920 - 320)));
                 line-height: calc(24 / 20);
                 display: block;
+                width: 100%;
                 margin: -25px 0;
                 .cart_item {
                     display: flex;
@@ -54,6 +56,7 @@
                         flex: 0 1 138px;
                         display: flex;
                         justify-content: center;
+                        align-items: center;
                         padding: 0 10px;
                         @media screen and (min-width: 1001px) and (max-width: 1200px) {
                             flex: 0 0 100px;
@@ -83,10 +86,11 @@
                             display: none;
                         }
                         img {
-                            border-radius: 20px;
                             width: 100%;
                             max-width: 100px;
                             height: auto;
+                            border-radius: 20px;
+                            object-fit: contain;
                         }
                     }
                     .product-name {
