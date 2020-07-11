@@ -191,7 +191,8 @@
                     padding: 0;
                     margin: 10px 0;
                     &::before,
-                    &::after {
+                    &::after,
+                    .variation {
                         display: none;
                     }
                     a.remove {
@@ -222,7 +223,7 @@
                     img {
                         border-radius: 7px;
                     }
-                    &__name{
+                    &__name {
                         flex: 0 1 50%;
                     }
                 }

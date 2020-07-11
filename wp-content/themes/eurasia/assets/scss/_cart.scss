@@ -107,6 +107,9 @@
                             flex: 1 0 100px;
                         }
                     }
+                    .variation {
+                        display: none;
+                    }
                     .product-quantity {
                         @media screen and (max-width: 768px) {
                             flex: none;

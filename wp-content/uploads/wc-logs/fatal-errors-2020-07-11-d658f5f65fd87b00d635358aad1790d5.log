@@ -1,0 +1,22 @@
+2020-07-11T11:18:19+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on null in W:\domains\eurasia\wp-content\themes\eurasia\functions.php:102
+Stack trace:
+#0 W:\domains\eurasia\wp-settings.php(508): include()
+#1 W:\domains\eurasia\wp-config.php(89): require_once('W:\\domains\\eura...')
+#2 W:\domains\eurasia\wp-load.php(37): require_once('W:\\domains\\eura...')
+#3 W:\domains\eurasia\wp-blog-header.php(13): require_once('W:\\domains\\eura...')
+#4 W:\domains\eurasia\index.php(17): require('W:\\domains\\eura...')
+#5 {main}
+  thrown в W:\domains\eurasia\wp-content\themes\eurasia\functions.php на строке 102
+
+2020-07-11T11:18:19+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on null in W:\domains\eurasia\wp-content\themes\eurasia\functions.php:102
+Stack trace:
+#0 W:\domains\eurasia\wp-settings.php(508): include()
+#1 W:\domains\eurasia\wp-config.php(89): require_once('W:\\domains\\eura...')
+#2 W:\domains\eurasia\wp-load.php(37): require_once('W:\\domains\\eura...')
+#3 W:\domains\eurasia\wp-blog-header.php(13): require_once('W:\\domains\\eura...')
+#4 W:\domains\eurasia\index.php(17): require('W:\\domains\\eura...')
+#5 {main}
+  thrown в W:\domains\eurasia\wp-content\themes\eurasia\functions.php на строке 102
+
+2020-07-11T13:43:21+00:00 CRITICAL syntax error, unexpected '.' в W:\domains\eurasia\wp-content\themes\eurasia\functions.php на строке 198
+
