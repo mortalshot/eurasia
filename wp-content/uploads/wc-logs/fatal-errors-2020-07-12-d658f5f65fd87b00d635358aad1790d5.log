@@ -1,0 +1,9 @@
+2020-07-12T16:46:34+00:00 CRITICAL Uncaught Error: Call to a member function single_add_to_cart_text() on null in W:\domains\eurasia\wp-content\themes\eurasia\functions.php:133
+Stack trace:
+#0 W:\domains\eurasia\wp-settings.php(508): include()
+#1 W:\domains\eurasia\wp-config.php(89): require_once('W:\\domains\\eura...')
+#2 W:\domains\eurasia\wp-load.php(37): require_once('W:\\domains\\eura...')
+#3 W:\domains\eurasia\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\eura...')
+#4 {main}
+  thrown в W:\domains\eurasia\wp-content\themes\eurasia\functions.php на строке 133
+
