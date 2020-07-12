@@ -228,30 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     );
 
-    // !Добавление радио баттонов у вариативных товаров
-
-
-
-    $(document).on('change', '.variation-radios input', function () {
-        $('select[name="' + $(this).attr('name') + '"]').val($(this).val()).trigger('change');
-        console.log($(this));
-    });
-    // $(document).on('change', '.variation-radios input', function () {
-    //     $('select[name="' + $(this).attr('name') + '"]').val($(this).val()).trigger('change');
-    // });
-    $(document).on('woocommerce_update_variation_values', function () {
-        $('.variation-radios input').each(function (index, element) {
-            $(element).removeAttr('disabled');
-            var thisName = $(element).attr('name');
-            var thisVal = $(element).attr('value');
-            if ($('select[name="' + thisName + '"] option[value="' + thisVal + '"]').is(':disabled')) {
-                $(element).prop('disabled', true);
-            }
-        });
-    });
-
-    // $('.variation-radios input').click(function (e) {
-    //     $('.variation-radios input').attr('checked', false);
-    //     $(this).attr('checked', true);
-    // })
+    // !Маска на ввод номера телефона
+    $("#billing_phone").mask("+7(999) 999-9999");
 });

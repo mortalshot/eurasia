@@ -138,26 +138,20 @@
                         justify-content: space-between;
                         align-items: center;
                         color: $text-color;
-
-                        .variations_form {
+                        .variations_form,
+                        .variations {
                             width: 100%;
-                            select,
-                            .reset_variations,
-                            .label {
-                                // display: none;
+                            .label,
+                            .reset_variations {
+                                display: none !important;
                             }
-                            .variations {
-                                width: 100%;
-                            }
-                            .variation-radios {
+                            .variable-items-wrapper {
                                 display: flex;
+                                align-items: center;
                                 flex-wrap: wrap;
                                 padding: 10px 0;
-                                margin: 0 -10px;
-                                input {
-                                    // display: none;
-                                }
-                                label {
+                                margin: 0 -5px;
+                                .variable-item {
                                     cursor: pointer;
                                     border: 2px solid $text-color;
                                     border-radius: 20px;
@@ -169,11 +163,11 @@
                                     transition: 0.3s ease all 0s;
                                     white-space: nowrap;
                                     &:hover {
+                                        color: $hover-color;
                                         border-color: $hover-color;
                                     }
-                                }
-                                input:checked {
-                                    & + label {
+                                    &.selected {
+                                        color: $hover-color;
                                         border-color: $hover-color;
                                     }
                                 }
@@ -182,6 +176,7 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
+                                transition: 0.3s ease all 0s;
                             }
                         }
                         .price {
@@ -203,6 +198,9 @@
                                 font-size: calc(12px + 2 * ((100vw - 320px) / (1920 - 320)));
                                 padding-left: 9px;
                             }
+                        }
+                        .qib-container {
+                            display: none !important;
                         }
                         .ajax_add_to_cart {
                             font-size: 0;

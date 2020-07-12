@@ -1171,25 +1171,34 @@ li {
   color: #F4F4F4;
 }
 
-.product-cards .woocommerce .products .product .product-content .product-footer .variations_form {
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations {
   width: 100%;
 }
 
-.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variations {
-  width: 100%;
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .label,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .reset_variations,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations .label,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations .reset_variations {
+  display: none !important;
 }
 
-.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variation-radios {
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variable-items-wrapper,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations .variable-items-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 10px 0;
-  margin: 0 -10px;
+  margin: 0 -5px;
 }
 
-.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variation-radios label {
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variable-items-wrapper .variable-item,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations .variable-items-wrapper .variable-item {
   cursor: pointer;
   border: 2px solid #F4F4F4;
   border-radius: 20px;
@@ -1209,15 +1218,20 @@ li {
   white-space: nowrap;
 }
 
-.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variation-radios label:hover {
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variable-items-wrapper .variable-item:hover,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations .variable-items-wrapper .variable-item:hover {
+  color: #E0A532;
   border-color: #E0A532;
 }
 
-.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variation-radios input:checked + label {
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .variable-items-wrapper .variable-item.selected,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations .variable-items-wrapper .variable-item.selected {
+  color: #E0A532;
   border-color: #E0A532;
 }
 
-.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .single_variation_wrap {
+.product-cards .woocommerce .products .product .product-content .product-footer .variations_form .single_variation_wrap,
+.product-cards .woocommerce .products .product .product-content .product-footer .variations .single_variation_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1227,6 +1241,8 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .product-cards .woocommerce .products .product .product-content .product-footer .price {
@@ -1257,6 +1273,10 @@ li {
   color: #C94F4F;
   font-size: calc(12px + 2 * ((100vw - 320px) / (1920 - 320)));
   padding-left: 9px;
+}
+
+.product-cards .woocommerce .products .product .product-content .product-footer .qib-container {
+  display: none !important;
 }
 
 .product-cards .woocommerce .products .product .product-content .product-footer .ajax_add_to_cart {
