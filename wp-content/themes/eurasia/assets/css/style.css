@@ -1,5 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "Markella";
+  src: url("../fonts/markella.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100%;
 }
@@ -92,6 +100,7 @@ li {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  font-family: "Markella";
   color: #F4F4F4;
 }
 
@@ -281,6 +290,7 @@ li {
 }
 
 .menu-item a {
+  font-family: "Markella";
   font-weight: 600;
   font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));
   line-height: calc(24 / 20);
@@ -3219,6 +3229,10 @@ li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+}
+
+#comments.comments-area .comment-list-wrapper .comment-list .comment .comment-body .comment-content p {
+  word-break: break-word;
 }
 
 #comments.comments-area .comment-list-wrapper .comment-list .comment .comment-body .comment-content .rating {

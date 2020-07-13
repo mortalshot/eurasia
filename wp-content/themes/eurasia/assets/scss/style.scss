@@ -346,6 +346,9 @@
                         }
                     }
                     .comment-content {
+                        p {
+                            word-break: break-word;
+                        }
                         .rating {
                             display: flex;
                             position: absolute;
